@@ -10,23 +10,28 @@ use Illuminate\Support\Facades\Route;
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
-|
+
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/about/{search}', function () {
-    $data = [
-        'pageTitle' => 'Tentang Kami',
-        'content' => 'Ini adalah halaman tentang kami.'
-    ];
-    return view('about', $data);
-});
+// routes/web.php atau routes/api.php
 
-Route::get('/produk', 'App\Http\Controllers\ProdukController@index');
+// Menampilkan semua user
+Route::get('/users', 'UserController@index');
 
-Route::get('/produk/tambah_produk', 'ProdukController@tambah');
-Route::post('/produk/simpan_produk', 'ProdukController@simpan');
-Route::get('/produk/ubah_produk/id', 'ProdukController@ubah');
-Route::post('/produk/update_produk/{id}', 'ProdukController@update');
+// Menampilkan form tambah user
+Route::get('/users/create', 'UserController@create');
+
+// Menyimpan user baru
+Route::post('/users', 'UserController@store');
+
+// Menampilkan detail user
+Route::get('/users/{user}', 'UserController@show');
+
+// Menampilkan form edit user
+Route::get('/users/{user}/edit', 'UserController@edit');
+
+// Update data user
+Route::put('/users/{user}', 'UserController@update');
+
+// Menghapus user
+Route::delete('/users/{user}', 'UserController@destroy');
