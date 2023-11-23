@@ -1,4 +1,4 @@
-Clone this repository to your project 2. Run `composer update` 3. Generate the application key using `php artisan key:generate` 4. Run database migrations and seed the database using `php artisan migrate --seed` 5. Now you have a Laravel project with the Starter Template 3. copy .env.example to .env 4. Generate the application key using `php artisan key:generate` 5. Set your .env file 6. Run database migrations and seed the database using `php artisan migrate --seed` 7. Now you have a Laravel project with the Starter Template
+
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
